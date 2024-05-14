@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,41 @@
     <link rel="stylesheet" href="/CSS/todo.css">
 </head>
 <body>
-    <h2 id="userNameDisplay"></h2>
-    안녕하세요
+    <div id="container">
+        <header id="header">
+            <div id="logo">
+                <img src="image 4.png">
+            </div>
+        </header>
+        <div id="content">
+            <aside id="sidebar">사이드바
+                <div id="entire">전체 공간</div>
+            </aside>
+            <div id="main">
+                <h1 id="title">Todo List</h1>
+                <div id="main_container">
+                    <section id="todo_list">
+                        <h1 id="todo_title">To do</h1>
+                        <div id="control_button">
+                            <button id="delete">삭제</button> 
+                            <button id="add">추가</button>
+                            <form id= "signup" style="display: none;">
+                                <fieldset>
+                                    <legend> 투두리스트 작성</legend>
+                                    <input id="wr_todo" name="wr_todo" type="text" required autofocus>
+                                </fieldset>
+                            </form>
+                        </div>
+                    <form id="todo_form" style="display: none;">
+                        <input type="text" id="todo_input">
+                        <input type="submit" value="submit">
+                    </form>
+                    </section>
+                    <section id="calendar">달력 공간</section>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="/JS/todo.js"></script>
 </html>
