@@ -2,4 +2,70 @@
 
 body {
     text-align: center;
+    margin: 0; 
+    padding: 0;
+}
+    header
+    {
+    background-color: white;
+
+}
+.second {
+    margin-top: 80px;
+    height: 558px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: rgb(232, 239, 248);
+    overflow: hidden; 
+}
+.id1 {
+    margin-right: 50px; 
+    position: relative;
+    top: 40px; 
+
+}
+.input1 {
+    width: 350px;
+    height: 40px;
+    position: relative;
+    top: -15px;
+    border-radius: 8px;
+    border: 2px solid #a7aeb6;
+}
+.input2 {
+    width: 350px;
+    height: 40px;
+    margin-left: 65px;
+    position: relative;
+    top: -15px;
+    border-radius: 8px;
+    border: 2px solid #a7aeb6;
+}
+
+.button {
+    width: 130px;
+    height: 40px;
+    bottom: -70px;
+    right: 240px;
+    border-radius: 5px;
+    border-color: black;
+    background-color: black;
+    color: white;
+    position: relative;
+    }
+
+.move1 {
+    margin-top: 60px;
+    margin-right: 320px;
+}
+.move2 {
+    margin-top: 30px;
+    margin-right: 290px;
+}
+.move3 {
+    margin-top: 80px;
+    position: relative;
+    top: -50px;
+    left: 420px;
+    color: #8e9daf;
 }
