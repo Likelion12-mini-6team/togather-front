@@ -1,5 +1,100 @@
 /*적용되었는지 확인하기 위해 작성한 코드이므로 지우셔도 됩니다.*/
 
-body {
+body{
     text-align: center;
+    margin: 0; 
+    padding: 0;
+   }
+   header
+   {
+    background-color: white;
+       
+   }
+   div {
+    position:relative;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 80px;
+    background-color: rgb(232, 239, 248);
+    height: 557px;
+    overflow: hidden; 
 }
+
+    
+    .main {
+    position:relative;
+    margin-top: 100px;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    
+    .main input, .main button {
+        position:relative;
+        margin-top: 30px;
+    }
+    
+    .move1 {
+        margin-right: 420px; 
+        position: relative;
+        top: 7px; 
+        
+}
+    .move2 {
+    margin-right: 263px; 
+    position: relative;
+    top: -30px;
+}
+    .move3 {
+    margin-right: 230px;
+    position: relative;
+    top: -70px; 
+}
+    
+    .move4 {
+    margin-left: 240px;
+    position: relative;
+    top: -110px;
+    color: #8e9daf;
+}
+    .button {
+        width: 130px;
+        height: 40px;
+        border-radius: 5px;
+        border-color: black;
+        background-color: black;
+        color: white;
+        position: relative;
+        top: -120px;
+    }
+    .input1 {
+        width: 500px;
+        height: 40px;
+        position: relative;
+        top: -40px;
+        border-radius: 8px;
+        border: 2px solid #a7aeb6;
+        font-size: 20px;
+        text-align: center;
+}
+
+    .input2 {
+        width: 300px;
+        height: 40px;
+        position: relative;
+        top: -77px;
+        border-radius: 8px;
+        border: 2px solid #a7aeb6;
+}
+    .input3 {
+        width: 300px;
+        height: 40px;
+        position: relative;
+        top: -135px;
+        border-radius: 8px;
+        border: 2px solid #a7aeb6;
+}
+
+
