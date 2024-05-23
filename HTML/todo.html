@@ -14,7 +14,10 @@
             </div>
         </header>
         <div id="content">
-            <aside id="sidebar">사이드바
+            <aside id="sidebar">Users
+                <div id="userList"> 
+                    <!-- 유저 목록이 이곳에 추가됩니다 -->
+                </div>
                 <div id="entire">전체 공간</div>
             </aside>
             <div id="main">
@@ -25,23 +28,23 @@
                         <div id="control_button">
                             <button id="delete">삭제</button> 
                             <button id="add">추가</button>
-                            <form id= "signup" style="display: none;">
+                            <form id="signup" style="display: none;">
                                 <fieldset>
                                     <legend> 투두리스트 작성</legend>
                                     <input id="wr_todo" name="wr_todo" type="text" required autofocus>
                                 </fieldset>
                             </form>
                         </div>
-                    <form id="todo_form" style="display: none;">
-                        <input type="text" id="todo_input">
-                        <input type="submit" value="submit">
-                    </form>
+                        <form id="todo_form" style="display: none;">
+                            <input type="text" id="todo_input">
+                            <input type="submit" value="submit">
+                        </form>
                     </section>
                     <section id="calendar">달력 공간</section>
                 </div>
             </div>
         </div>
     </div>
+    <script src="/JS/todo.js"></script>
 </body>
-<script src="/JS/todo.js"></script>
 </html>

@@ -1,4 +1,3 @@
-// main.js
 document.getElementById("createTodoList").addEventListener("click", function() {
     var projectName = document.getElementById("projectName").value;
 
@@ -9,5 +8,5 @@ document.getElementById("createTodoList").addEventListener("click", function() {
     var randomAddress = Math.random().toString(36).substring(2, 15);
 
     // second.html로 넘어가면서 랜덤 주소 포함
-    window.location.href = "second.html?" + randomAddress;
+    window.location.href = "second.html?url=" + randomAddress;
 });
