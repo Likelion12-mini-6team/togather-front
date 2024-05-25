@@ -4,7 +4,15 @@ window.onload = function () {
     const prevEl = document.querySelector('.prev');
     const nextEl = document.querySelector('.next');
     let currentDate;
+    let today = new Date();
+    const calendarBody = document.querySelector('.calendar-body');
+    const prevEl = document.querySelector('.prev');
+    const nextEl = document.querySelector('.next');
+    let currentDate;
   
+    let DATA = {
+      // todolist 목록 
+    }
     let DATA = {
       // todolist 목록 
     }
@@ -17,7 +25,42 @@ window.onload = function () {
       var format = [yyyy, month, dd].join('-');
       return format;
     }
+    // 현재 날짜 보기 좋게 출력하는 방법
+    Date.prototype.format = function () {
+      var yyyy = this.getFullYear();
+      var month = (this.getMonth() + 1);
+      var dd = this.getDate();
+      var format = [yyyy, month, dd].join('-');
+      return format;
+    }
   
+    Date.prototype.format2 = function () {
+      var yyyy = this.getFullYear();
+      var month = (this.getMonth() + 1);
+      var format = [yyyy, month].join('-');
+      return format;
+    }
+  
+    // 달력생성방법 
+    buildCalendar();
+    function buildCalendar() {
+      today = new Date(today.getFullYear(), today.getMonth(), 1);
+      let firstDate = new Date(today.getFullYear(), today.getMonth(), 1);
+      const monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      const leapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      const notLeapYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      const headerYear = document.querySelector('.current-year-month');
+  
+      // 윤년 체크 
+      if ((firstDate.getFullYear() % 4 === 0 && firstDate.getFullYear() % 100 !== 0) || firstDate.getFullYear() % 400 === 0) {
+        pageYear = leapYear;
+      } else {
+        pageYear = notLeapYear;
+      }
+      headerYear.innerHTML = `${monthList[firstDate.getMonth()]}&nbsp;&nbsp;&nbsp;&nbsp;${today.getFullYear()}`;
+      makeElement(firstDate);
+      currentDateget();
+    }
     Date.prototype.format2 = function () {
       var yyyy = this.getFullYear();
       var month = (this.getMonth() + 1);
@@ -94,15 +137,6 @@ window.onload = function () {
     function currentDateget() {
       currentDate = today.format();
     }
-
-    target.classList.add('active');
-    today = new Date(today.getFullYear(), today.getMonth(), target.innerHTML);
-    showMain();
-    currentDateget();
-  };
-
- 
-
   
     calendarBody.addEventListener('click', function (e) {
       if (!e.target.classList.contains('dateClass')) return;
@@ -158,6 +192,5 @@ window.onload = function () {
         signupForm.style.display = 'block';
       });
     });
+  }
   
-  
-
