@@ -20,7 +20,7 @@ window.onload = function () {
     }
     // 현재 날짜 보기 좋게 출력하는 방법
     Date.prototype.format = function () {
-      var yyyy = this.getFullYear();
+      var yyyy = this.getFullYear();    
       var month = (this.getMonth() + 1);
       var dd = this.getDate();
       var format = [yyyy, month, dd].join('-');
@@ -137,7 +137,6 @@ window.onload = function () {
     currentDateget();
   };
 
- 
 
   
     calendarBody.addEventListener('click', function (e) {
@@ -194,6 +193,5 @@ window.onload = function () {
         signupForm.style.display = 'block';
       });
     });
-  
-  
+    
 
