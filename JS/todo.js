@@ -99,8 +99,8 @@ window.onload = function () {
     today = new Date(today.getFullYear(), today.getMonth(), target.innerHTML);
     showMain();
     currentDateget();
-  });
-}
+  };
+
  
 
   
@@ -158,6 +158,6 @@ window.onload = function () {
         signupForm.style.display = 'block';
       });
     });
-  }
+  
   
 
