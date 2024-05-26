@@ -3,19 +3,12 @@ window.onload = function () {
     const calendarBody = document.querySelector('.calendar-body');
     const prevEl = document.querySelector('.prev');
     const nextEl = document.querySelector('.next');
-    let currentDate;
-    let today = new Date();
-    const calendarBody = document.querySelector('.calendar-body');
-    const prevEl = document.querySelector('.prev');
-    const nextEl = document.querySelector('.next');
-    let currentDate;
+
   
     let DATA = {
       // todolist 목록 
     }
-    let DATA = {
-      // todolist 목록 
-    }
+
   
     // 현재 날짜 보기 좋게 출력하는 방법
     Date.prototype.format = function () {
