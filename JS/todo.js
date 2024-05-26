@@ -99,9 +99,8 @@ window.onload = function () {
     today = new Date(today.getFullYear(), today.getMonth(), target.innerHTML);
     showMain();
     currentDateget();
-  });
-}
- 
+  };
+
 
   
     calendarBody.addEventListener('click', function (e) {
@@ -158,6 +157,5 @@ window.onload = function () {
         signupForm.style.display = 'block';
       });
     });
-  }
-  
+    
 
