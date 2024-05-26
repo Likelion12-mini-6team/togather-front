@@ -94,6 +94,15 @@ window.onload = function () {
     function currentDateget() {
       currentDate = today.format();
     }
+
+    target.classList.add('active');
+    today = new Date(today.getFullYear(), today.getMonth(), target.innerHTML);
+    showMain();
+    currentDateget();
+  };
+
+ 
+
   
     calendarBody.addEventListener('click', function (e) {
       if (!e.target.classList.contains('dateClass')) return;
@@ -149,5 +158,6 @@ window.onload = function () {
         signupForm.style.display = 'block';
       });
     });
-  }
   
+  
+
