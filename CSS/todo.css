@@ -216,9 +216,9 @@ border-radius: 50%;
 align-self: center;
 }
 .active {
-background-color: black; /* 배경색을 검은색으로 변경 */
-color: white; /* 글자색을 하얀색으로 변경 */
-font-weight: bold; /* 글자를 굵게 표시 */
-border-radius: 35%; /* 타원형 모양을 만들기 위해 경계선을 둥글게 처리 */
-display: inline-block; /* 타원 모양을 유지하기 위해 display 속성 변경 */
+background-color: lightskyblue; 
+color: white; 
+font-weight: bold; 
+border-radius: 35%; 
+display: inline-block; 
 }
