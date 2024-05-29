@@ -374,6 +374,8 @@ body, html {
   z-index: 100;
   display: none;
   position: absolute;
+  margin-left: -70px;
+  margin-top: 20px;
 }
 
 #signup fieldset {
@@ -552,7 +554,8 @@ label[for="team_todo"] {
   z-index: 100;
   display: none;
   position: absolute;
-  margin-left: 245px;
+  margin-left: 330px;
+  margin-top: 150px;
 }
 
 .input2_field button {
