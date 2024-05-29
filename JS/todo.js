@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // 파일1의 코드
+
   var addButton = document.getElementById('add');
   var signupForm = document.getElementById('signup');
   var submitTodoButton = document.getElementById('submit_todo');
@@ -189,16 +189,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // 파일2의 코드
   const calendarBody = document.querySelector('.calendar-body');
   const prevEl = document.querySelector('.prev');
   const nextEl = document.querySelector('.next');
   let today = new Date();
   let currentDate;
-  
-  const DATA = {
-    // todolist 목록 
-  };
+
   
   // 현재 날짜 보기 좋게 출력하는 방법
   Date.prototype.format = function () {  
