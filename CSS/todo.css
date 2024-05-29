@@ -70,6 +70,8 @@ body, html {
   width: 80%;
 }
 
+
+
 #todo_title{
   padding-left: 120px;
   margin-bottom: 0;
@@ -417,6 +419,8 @@ body, html {
   padding: 10px;
   border-bottom: 1px solid #ccc;
 }
+
+
 .input_field input {
   width: 50px; /* 원하는 네모칸의 너비로 설정하세요 */
   height: 270px; /* 원하는 네모칸의 높이로 설정하세요 */
@@ -484,23 +488,28 @@ label[for="team_todo"] {
   height: 20px; /* 체크박스의 높이를 조절합니다. */
   border-width: 2px; /* 체크박스의 테두리 굵기를 조절합니다. */
 }
+
 #saved_items_container {
   display: flex;
   flex-direction: column; /* 네모칸들을 세로로 정렬합니다. */
   align-items: flex-start; /* 네모칸들을 왼쪽 정렬합니다. */
   padding: 10px; /* 컨테이너 내부 여백을 추가합니다. */
-
+  overflow-y: scroll;
+  width: 500px;
+  height: 500px;
+  margin-left: 100px;
 }
+
+
 .saved_item {
   border: 2px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
   background-color: #ffffff;
-  margin-top: -405px;
+  margin-top: 20px;
   width: 360px;
   height: 90px;
-  margin-left: 350px;
   display: flex; /* Flexbox로 설정 */
   justify-content: space-between; /* 아이템들을 양 끝으로 배치 */
   align-items: center; /* 아이템들을 수직 가운데 정렬 */
@@ -509,8 +518,8 @@ label[for="team_todo"] {
   border-top: 1px solid black; /* 위쪽 테두리 스타일 설정 */
   border-right: 1px solid black; /* 오른쪽 테두리 스타일 설정 */
   border-bottom: 1px solid black; 
-  margin-top: -600px;
-  margin-left: 355px;
+  flex: 0 0 auto;
+  
 }
 .saved_item + .saved_item {
   margin-top: 2px; /* 이전 네모칸 아래에 위치하도록 위쪽 여백을 추가 */

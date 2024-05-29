@@ -27,10 +27,28 @@
                 <h1 id="title">Todo List</h1>
                 <div id="main_container">
                     <section id="todo_list">
-                        <h1 id="todo_title">To do</h1>
-                        <div id="control_button">
-                            <button id="delete">삭제</button> 
-                            <button id="add">추가</button>
+                        <div id="scroll">
+                            <h1 id="todo_title">To do</h1>
+                            <div id="control_button">
+                                <button id="delete">삭제</button> 
+                                <button id="add">추가</button>
+                                
+                            </div>
+                            
+                            <div id="saved_items_container">
+                                <form id="edit_form" style="display: none;">
+                                    <fieldset>
+                                        <legend>투두리스트 수정</legend>
+                                        <div class="input2_field">
+                                            <input id="edit_todo_input" type="text" class="edit-input" value="">
+                                            <button id="cancel2" type="button">취소</button>
+                                            <button id="edit_todo" type="button">수정</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            
+                        </div>
+                        
                         </div>
                         <form id="signup" style="display: none;">
                             <fieldset>
@@ -50,7 +68,6 @@
                                 </div>
                             </fieldset>
                         </form>
-                        <ul id="todo_items"></ul>
                     </section>
                     <section id="calendar">
                         <div class="calendar_title">
@@ -69,21 +86,16 @@
                         </div>
                         <div class="calendar-body"></div>
                     </section>
+                    
                 </div>
             </div>
         </div>
+        <div>
+       
     </div>
-    <div id="saved_items_container"></div>
-    <form id="edit_form" style="display: none;">
-        <fieldset>
-            <legend>투두리스트 수정</legend>
-            <div class="input2_field">
-                <input id="edit_todo_input" type="text" class="edit-input" value="">
-                <button id="cancel2" type="button">취소</button>
-                <button id="edit_todo" type="button">수정</button>
-            </div>
-        </fieldset>
-    </form>
+
+    
+    
     
     <script src="/JS/todo.js"></script>
 </body>
