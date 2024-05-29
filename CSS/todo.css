@@ -376,8 +376,8 @@ body, html {
   z-index: 100;
   display: none;
   position: absolute;
-  margin-left: -70px;
-  margin-top: 20px;
+  margin-left: 330px;
+  margin-top: 10px;
 }
 
 #signup fieldset {
@@ -497,7 +497,11 @@ label[for="team_todo"] {
   overflow-y: scroll;
   width: 500px;
   height: 500px;
-  margin-left: 100px;
+  margin-left: 135px;
+}
+
+#saved_items_container::-webkit-scrollbar {
+  display: none;
 }
 
 
