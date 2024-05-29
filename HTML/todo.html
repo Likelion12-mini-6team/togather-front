@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todopage</title>
-    <link rel="stylesheet" href="../CSS/todo.css">
+    <link rel="stylesheet" href="/CSS/todo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
         <header id="header">
             <div id="logo">
-                <img src="image 4.png">
+                <img src="image 4.png" alt="logo">
             </div>
         </header>
         <div id="content">
@@ -31,17 +31,26 @@
                         <div id="control_button">
                             <button id="delete">삭제</button> 
                             <button id="add">추가</button>
-                            <form id="signup" style="display: none;">
-                                <fieldset>
-                                    <legend> 투두리스트 작성</legend>
-                                    <input id="wr_todo" name="wr_todo" type="text" required autofocus>
-                                </fieldset>
-                            </form>
                         </div>
-                        <form id="todo_form" style="display: none;">
-                            <input type="text" id="todo_input">
-                            <input type="submit" value="submit">
+                        <form id="signup" style="display: none;">
+                            <fieldset>
+                                <legend>투두리스트 작성</legend>
+                                <div class="checkbox-container">
+                                    <label for="team_todo" style="display: inline;">
+                                        팀 투두로 추가 
+                                    </label>
+                                    <input id="team_todo" name="team_todo" type="checkbox">
+                                </div>
+                                <div class="input_field">
+                                    <input id="wr_todo" name="wr_todo" type="text" required autofocus>
+                                </div>
+                                <div class="button_field">
+                                    <button id="cancel" type="button">취소</button>
+                                    <button id="submit_todo" type="button">추가</button>
+                                </div>
+                            </fieldset>
                         </form>
+                        <ul id="todo_items"></ul>
                     </section>
                     <section id="calendar">
                         <div class="calendar_title">
@@ -64,6 +73,18 @@
             </div>
         </div>
     </div>
-    <script src="../JS/todo.js"></script>
+    <div id="saved_items_container"></div>
+    <form id="edit_form" style="display: none;">
+        <fieldset>
+            <legend>투두리스트 수정</legend>
+            <div class="input2_field">
+                <input id="edit_todo_input" type="text" class="edit-input" value="">
+                <button id="cancel2" type="button">취소</button>
+                <button id="edit_todo" type="button">수정</button>
+            </div>
+        </fieldset>
+    </form>
+    
+    <script src="/JS/todo.js"></script>
 </body>
 </html>

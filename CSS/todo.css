@@ -63,12 +63,11 @@ body, html {
   display: flex;
   flex-direction: row;
   flex: 1;
-
+  width: 100%;
 }
 
 #todo_list,#calendar{
-  width: 50%;
-
+  width: 80%;
 }
 
 #todo_title{
@@ -83,12 +82,13 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 width: 400px; 
-height: 400px;
+height: 500px;
 border: 1px solid black;
 border-radius: 10px;
 box-sizing: border-box;
 align-items: center;
 margin: auto;
+margin-left: 200px;
 }
 
 #calendar div {
@@ -110,7 +110,6 @@ background-color: #f3f3f3;
 #control_button{
 float: right;
 padding-right: 100px;
-
 }
 
 
@@ -221,4 +220,395 @@ color: white; /* 글자색을 하얀색으로 변경 */
 font-weight: bold; /* 글자를 굵게 표시 */
 border-radius: 35%; /* 타원형 모양을 만들기 위해 경계선을 둥글게 처리 */
 display: inline-block; /* 타원 모양을 유지하기 위해 display 속성 변경 */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+}
+
+#logo {
+  float: left;
+}
+
+#content {
+  display: flex;
+  flex: 1;
+  border: solid black;
+}
+
+#sidebar {
+  display: flex;
+  background-color: #EDF0F7;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 200px;
+  border: solid black;
+  border-top: none;
+}
+
+#entire {
+  margin-top: auto;
+  height: 50px;
+  width: 200px;
+  border-top: solid black;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+#title {
+  align-self: flex-start;
+  margin-top: 0;
+  padding-left: 50px;
+}
+
+#main_container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 80%;
+}
+
+#todo_list, #calendar {
+  width: 600px;
+  padding: 20px;
+}
+
+#todo_title {
+  padding-left: 120px;
+  margin-bottom: 0;
+  padding-top: -30px;
+  width: 100px;
+  margin-top: 40px;
+}
+
+#calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#calendar div {
+  display: flex;
+}
+
+#calendar div span {
+  flex: 1;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f3f3f3;
+}
+
+.day {
+  font-weight: bold;
+}
+
+.date {
+  padding: 5px;
+  margin: 1px;
+}
+
+#control_button {
+  float: right;
+  padding-right: 10px; /* 오른쪽 여백을 조정하여 버튼을 오른쪽으로 이동 */
+  margin-right: 20px; /* 버튼을 오른쪽으로 더 이동시키기 위해 마진 추가 */
+  margin-top: -30px;
+}
+
+#delete, #add {
+  width: 90px; /* 버튼의 너비 설정 */
+  height: 38px; /* 버튼의 높이 설정 */
+  font-size: 16px; /* 버튼 글자의 크기 설정 */
+  color: hsl(0, 0%, 0%); /* 버튼 글자의 색상 설정 */
+  border-color:black;
+  border-radius: 5px; /* 버튼 모서리 둥글게 설정 */
+  cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+}
+
+#delete {
+  background-color: #ffffff; /* 삭제 버튼 배경색 설정 */
+}
+
+#add {
+  background-color: #ffffff; /* 추가 버튼 배경색 설정 */
+}
+
+#signup {
+  background: #fff;
+  border: 4px solid #090722;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  height: 420px;
+  margin: 30px auto;
+  top: 35%;
+  left: 20%;
+  z-index: 100;
+  display: none;
+  position: absolute;
+}
+
+#signup fieldset {
+  border: none; /* Remove border from fieldset */
+  margin-bottom: 30px;
+  
+}
+
+
+#signup legend {
+  position: relative;
+  top: 27px; /* 글자를 아래로 이동시킵니다. */
+  right: -13px;
+  font-size: 17px;
+  background: none; /* Remove background from legend */
+  padding: 0; /* Remove padding from legend */
+  font-weight: bold;
+}
+
+.input_field {
+  display: flex;
+  align-items: center;
+}
+
+.input_field input {
+  flex: 1;
+}
+
+.input_field button {
+  margin-left: 10px; /* Add margin between input and buttons */
+}
+
+#todo_items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#todo_items li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.input_field input {
+  width: 50px; /* 원하는 네모칸의 너비로 설정하세요 */
+  height: 270px; /* 원하는 네모칸의 높이로 설정하세요 */
+  padding: 5px; /* 원하는 네모칸의 안쪽 여백으로 설정하세요 */
+  font-size: 16px; /* 원하는 글꼴 크기로 설정하세요 */
+}
+
+.input_field {
+  margin-bottom: 10px; /* 입력 네모칸과 버튼 사이에 여백을 추가합니다. */
+  padding: 10px; /* 네모칸 주위에 여백을 추가합니다. */
+  border-radius: 5px; 
+  
+}
+
+.button_field {
+  display: flex;
+  margin-left: 180px;
+  margin-top: -5px;
+
+}
+.checkbox-container {
+  display: flex;
+  align-items: center; /* 수직 정렬을 위해 추가 */
+  margin-bottom: -3px; /* 네모칸과 체크박스 사이의 간격 조정 */
+}
+label[for="team_todo"] {
+  margin-left: 240px; /* 체크박스와 텍스트 사이의 간격 조정 */
+  font-size: 15px;
+  color: #2f313ba0;
+}
+  
+
+.button_field button {
+  width: 80px; /* 버튼의 너비를 설정합니다. 필요에 따라 조절하세요. */
+  height: 45px; /* 버튼의 높이를 설정합니다. 필요에 따라 조절하세요. */
+  margin-left: 10px; /* 버튼 사이의 여백을 설정합니다. */
+  margin-top: 2px;
+  font-size: 16px; /* 버튼의 글자 크기를 설정합니다. */
+  color: white; /* 버튼 글자의 색상을 설정합니다. */
+  border: none; /* 버튼 테두리를 없앱니다. */
+  border-radius: 5px; /* 버튼 모서리를 둥글게 만듭니다. */
+  cursor: pointer; /* 마우스 커서를 포인터로 변경합니다. */
+}
+
+#submit_todo {
+  background-color: #02082fa0; /* 추가 버튼의 배경색을 설정합니다. */
+}
+
+#cancel {
+  background-color: rgb(180, 175, 175); /* 취소 버튼의 배경색을 설정합니다. */
+}
+
+#submit_todo:hover, #cancel:hover {
+  opacity: 0.8; /* 버튼에 마우스를 올렸을 때 투명도를 변경합니다. */
+}
+
+#wr_todo {
+  border: 2px solid rgb(180, 180, 203); /* 테두리의 색상과 두께를 변경합니다. */
+  padding: 10px; /* 네모칸 주위에 10px의 여백을 추가합니다. */
+  border-radius: 5px; /* 테두리의 모서리를 둥글게 만듭니다. */
+}
+
+#team_todo {
+  width: 20px; /* 체크박스의 너비를 조절합니다. */
+  height: 20px; /* 체크박스의 높이를 조절합니다. */
+  border-width: 2px; /* 체크박스의 테두리 굵기를 조절합니다. */
+}
+#saved_items_container {
+  display: flex;
+  flex-direction: column; /* 네모칸들을 세로로 정렬합니다. */
+  align-items: flex-start; /* 네모칸들을 왼쪽 정렬합니다. */
+  padding: 10px; /* 컨테이너 내부 여백을 추가합니다. */
+
+}
+.saved_item {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  margin-top: -405px;
+  width: 360px;
+  height: 90px;
+  margin-left: 350px;
+  display: flex; /* Flexbox로 설정 */
+  justify-content: space-between; /* 아이템들을 양 끝으로 배치 */
+  align-items: center; /* 아이템들을 수직 가운데 정렬 */
+  position: relative;
+  border-left: 5px solid black; /* 왼쪽 테두리를 굵게 설정 */
+  border-top: 1px solid black; /* 위쪽 테두리 스타일 설정 */
+  border-right: 1px solid black; /* 오른쪽 테두리 스타일 설정 */
+  border-bottom: 1px solid black; 
+  margin-top: -600px;
+  margin-left: 357px;
+}
+.saved_item + .saved_item {
+  margin-top: 2px; /* 이전 네모칸 아래에 위치하도록 위쪽 여백을 추가 */
+}
+
+
+
+.saved_item input[type="checkbox"] {
+  margin-left: auto; /* 체크박스를 오른쪽 끝으로 이동 */
+  width: 20px; /* 체크박스의 너비 설정 */
+  height: 20px; /* 체크박스의 높이 설정 */
+}
+
+
+
+.delete-selected {
+  opacity: 0.5; /* 버튼의 투명도를 줄여 어두워지게 함 */
+  pointer-events: none; /* 버튼 클릭 이벤트를 비활성화하여 선택 불가능하게 함 */
+}
+
+
+
+.input2_field input {
+  width: 150px;
+  height: 300px; /* 원하는 네모칸의 높이로 설정하세요 */
+  padding: 5px; /* 원하는 네모칸의 안쪽 여백으로 설정하세요 */
+  font-size: 16px; /* 원하는 글꼴 크기로 설정하세요 */
+  margin-top: 30px;
+}
+
+#edit_form {
+  /* 큰 네모칸 */
+  background: #fff;
+  border: 4px solid #090722;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  height: 420px;
+  margin: 30px auto;
+  top: 20%;
+  z-index: 100;
+  display: none;
+  position: absolute;
+  margin-left: 245px;
+}
+
+.input2_field button {
+  margin-left: 10px;
+}
+
+#edit_todo_input {
+  width: 100%; /* 네모칸의 너비를 100%로 설정하여 부모 요소에 꽉 차게 함 */
+  padding: 10px;
+  border: 2px solid rgb(180, 180, 203);
+  border-radius: 5px;
+  box-sizing: border-box; /* padding을 포함한 전체 너비로 설정 */
+}
+
+#cancel2, #edit_todo {
+  width: 80px;
+  height: 45px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 2px; /* 버튼 사이의 간격을 조절합니다. */
+  position: relative; /* 부모 요소인 #edit_form에 대해 상대적으로 배치합니다. */
+  right: -180px; /* 오른쪽으로 100px 이동합니다. */
+  bottom: -20px;
+}
+
+#cancel2 {
+  background-color: rgb(180, 175, 175);
+}
+
+#edit_todo {
+  background-color: #02082fa0;
+}
+
+#cancel2:hover,
+#edit_todo:hover {
+  opacity: 0.8;
+}
+
+.button_field {
+  display: flex;
+  margin-left: 180px;
+  margin-top: 10px; /* 수정된 부분 */
+}
+#edit_form fieldset {
+  border: none;
+  margin-bottom: 30px;
+}
+
+#edit_form legend {
+  position: relative;
+  top: 27px;
+  right: -13px;
+  font-size: 17px;
+  background: none;
+  padding: 0;
+  font-weight: bold;
 }
