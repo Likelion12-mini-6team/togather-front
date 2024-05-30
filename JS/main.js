@@ -13,17 +13,20 @@ document.getElementById("createTodoList").addEventListener("click", function() {
     // 랜덤 주소 생성
     var randomAddress = Math.random().toString(36).substring(2, 15);
 
+
+ // 여기부터 최초 팀 생성 API 코드
     // 요청할 데이터
     var requestData = {
-        teamName: projectName,
         url: randomAddress
     };
 
     // 데이터가 올바르게 생성되었는지 확인
     console.log('Request Data:', requestData);
 
+    const baseURL = "https://localhost/" //실제 API의 기본 URL로 변경해야함
+
     // 서버로 POST 요청 보내기 (서버 요청 없이 페이지 넘기려면 이 부분 주석 처리 해야함)
-    fetch('/', {
+    fetch(baseURL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -44,6 +47,7 @@ document.getElementById("createTodoList").addEventListener("click", function() {
     .catch((error) => {
         console.error('Error:', error);
     });
+    //API 코드 끝.
     
 
     //서버 요청 없이도 세컨드 페이지로 이동하는 코드 (테스트용)
